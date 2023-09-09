@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="circle" id="circle_id"></div>
+    <section>
+        <header>
+        <a href="#" class="logo"><img src="/Apple Website/asset/logo.png" alt=""></a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">What's New</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        </header>
+    </section>
+
+    <section class="content">
+        <div class="textbox">
+            <h2>It's not just a Phone<br>It's an <span id="focus_text">iPhone</span></h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio eligendi, iure vel recusandae amet maxime ad nostrum aspernatur sapiente, placeat eveniet. Quisquam culpa dolorem, quidem earum incidunt porro dolor cumque!</p>
+            <a href="#" id="learn_more">Learn More</a>
+        </div>
+
+        <div class="imgbox">
+            <!-- <img src="/Apple Website/asset/iphone1.png" class="iphone" alt=""> -->
+            <img src="/Apple Website/asset/iphone1.png" id="iphoneImage" class="iphone" alt="">
+
+        </div>
+
+      
+        <ul class="thumbnails">
+                <li><img src="/Apple Website/asset/iphone1.png" id="one" onclick="changeImage('iphone1.png'); changeCircle('rgb(72, 58, 161)')"></li>
+                <li><img src="/Apple Website/asset/iphone3.png" id="two" onclick="changeImage('iphone3.png'); changeCircle('rgb(65, 103, 28)')"></li>
+        </ul>
+        
+    </section>
+
+    <script>
+       function changeImage(anything) {
+    var iphoneImage = document.getElementById('iphoneImage');
+    iphoneImage.src = "/Apple Website/asset/" + anything;
+}
+
+        function changeCircle(color){
+            const circle = document.getElementById('circle_id');
+            const content = document.querySelector('.content');
+            const btn = document.getElementById('learn_more');
+            const span = document.getElementById('focus_text');
+            content.alignItems = 'start';
+            circle.style.background = color;
+            btn.style.background = color;
+            span.style.color = color;
+            btn.style.borderColor = color;
+
+        }
+
+    </script>
+</body>
+</html>
